@@ -21,5 +21,6 @@ public class RocketManager : MonoBehaviour
     {
         Instantiate(Rocket, spawnPoint); // instantiates the rocket at the position of the spawn point
         Debug.Log("rocket spawned!"); // this debug log was to check whether the rocket was spawned 
+       
     }
 }
