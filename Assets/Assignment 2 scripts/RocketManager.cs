@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RocketManager : MonoBehaviour
 {
+    public AudioClip RocketLaunch;
     public GameObject Rocket; // referencing Rocket Prefab 
     public Transform spawnPoint; // referencing the Spawnpoint for my rocket
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class RocketManager : MonoBehaviour
     {
         Instantiate(Rocket, spawnPoint); // instantiates the rocket at the position of the spawn point
         Debug.Log("rocket spawned!"); // this debug log was to check whether the rocket was spawned 
+        AudioSource.PlayClipAtPoint(RocketLaunch, transform.position); // plays the rocket launch audio clip when the rocket spawns in
        
     }
 }

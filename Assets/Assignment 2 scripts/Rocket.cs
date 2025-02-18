@@ -9,6 +9,8 @@ public class Rocket : MonoBehaviour
     public float timer = 0f; // timer for when to destroy the GameObject
     public float newSpeed = 5f; // this is for the speed that the rocket can go using the slider (it can be adjusted in the inspector)
     public float moveSpeed = 2f; // default movespeed for the rocket
+    public AudioClip Explosion;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class Rocket : MonoBehaviour
         if(timer >= duration) // if the timer is more or equal to the set duration the game object gets destroyed
         {
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint(Explosion, transform.position); // plays the explosions sound effect when the rocket is destroyed
             Debug.Log("rocket destroyed!"); // this debug log was to tell me when the rocket gets destroyed
         }
     }

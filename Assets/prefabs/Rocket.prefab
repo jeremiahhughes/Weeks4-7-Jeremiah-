@@ -100,4 +100,5 @@ MonoBehaviour:
   duration: 6
   timer: 0
   newSpeed: 5
-  moveSpeed: 2
+  moveSpeed: 4.1821437
+  Explosion: {fileID: 8300000, guid: 74abe6a76e09fd94c82158d581b77efa, type: 3}
