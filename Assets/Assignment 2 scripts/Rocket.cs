@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour
 {
-    public float duration = 10f;
+    public float duration = 10f; 
     public float timer = 0f;
     public float newSpeed = 5f;
     public float moveSpeed = 2f;

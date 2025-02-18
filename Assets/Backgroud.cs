@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RocketManager : MonoBehaviour
+
+public class Backgroud : MonoBehaviour
 {
-    public GameObject Rocket; 
-    public Transform spawnPoint; 
+    public float Rot = 2f; 
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +15,6 @@ public class RocketManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    public void RocketSpawner()
-    {
-        Instantiate(Rocket, spawnPoint); 
-        Debug.Log("rocket spawned!"); 
+        transform.Rotate(0,0,Rot * Time.deltaTime); 
     }
 }
