@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RocketManager : MonoBehaviour
 {
-    public GameObject Rocket; 
-    public Transform spawnPoint; 
+    public GameObject Rocket; // referencing Rocket Prefab 
+    public Transform spawnPoint; // referencing the Spawnpoint for my rocket
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class RocketManager : MonoBehaviour
     }
     public void RocketSpawner()
     {
-        Instantiate(Rocket, spawnPoint); 
-        Debug.Log("rocket spawned!"); 
+        Instantiate(Rocket, spawnPoint); // instantiates the rocket at the position of the spawn point
+        Debug.Log("rocket spawned!"); // this debug log was to check whether the rocket was spawned 
     }
 }
